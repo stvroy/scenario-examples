@@ -13,11 +13,7 @@
     ],
     "assets": {
       "host01": [
-        {
-          "file": "broken-api-stack.yml",
-          "target": "/root",
-          "chmod": "+r"
-        }
+        {"file": "broken-api-stack.yml", "target": "/root", "chmod": "+w"}
       ]
     }
   },
