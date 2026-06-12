@@ -1,9 +1,6 @@
 {
   "title": "Debug Broken Kubernetes API Gateway",
   "description": "A production API Gateway is broken. Pods are failing, and the service is unreachable. Investigate and fix the issues.",
-  "backend": {
-    "imageid": "kubernetes-kubeadm-1node"
-  },
   "details": {
     "intro": {
       "text": "intro.md"
@@ -14,17 +11,17 @@
         "text": "step1.md"
       }
     ],
-    "finish": {
-      "text": "finish.md"
+    "assets": {
+      "host01": [
+        {
+          "file": "broken-api-stack.yml",
+          "target": "/root",
+          "chmod": "+r"
+        }
+      ]
     }
   },
-  "assets": {
-    "host01": [
-      {
-        "file": "broken-api-stack.yml",
-        "target": "/root",
-        "chmod": "+r"
-      }
-    ]
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
   }
 }
